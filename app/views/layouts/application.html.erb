@@ -22,6 +22,16 @@
   </head>
 
   <body>
+    <% if current_page?(root_path) or current_page?(about_path) %>
+      <%= render "static_pages/navbar" %>
+    <% end %>
+
+    <% if current_page?(crm_dashboard_path) %>
+      <%= render "crm/navbar" %>
+    <% end %>
+
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 </html>

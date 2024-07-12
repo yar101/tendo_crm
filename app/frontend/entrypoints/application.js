@@ -28,3 +28,9 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // import '~/index.css'
 
 import "../javascript/application";
+
+// import {Turbo} from "@hotwired/turbo-rails";
+// Turbo.start()
+
+import Rails from "@rails/ujs";
+Rails.start()

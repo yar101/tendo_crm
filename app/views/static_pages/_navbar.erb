@@ -1,0 +1,19 @@
+<nav class="static-pages-navbar">
+  <div class="navbar-brand">
+    <div class="item">tendo_crm.dev</div>
+  </div>
+  <div class="menu">
+    <%= link_to "Home", root_path, class: "item" %>
+    <%= link_to "About", about_path, class: "item" %>
+  </div>
+
+  <div class="actions">
+    <% if user_signed_in? %>
+      <%= link_to "Enter to CRM", crm_dashboard_path, class: "item enter-to-crm" %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "item sign-out" %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "item sign-in" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "item sign-up" %>
+    <% end %>
+  </div>
+</nav>

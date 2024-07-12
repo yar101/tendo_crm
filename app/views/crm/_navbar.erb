@@ -1,0 +1,18 @@
+<nav class="crm-navbar">
+  <div class="brand">
+    Brand
+  </div>
+
+  <div class="links">
+    Links
+  </div>
+
+  <div class="actions">
+    <div class="item current-user">
+      <div class="avatar"></div>
+      <div class="action">
+        <%= link_to "#{current_user.email}", edit_user_registration_path %>
+      </div>
+    </div>
+  </div>
+</nav>
