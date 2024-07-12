@@ -64,3 +64,5 @@ gem "stimulus-rails"
 gem "vite_rails"
 
 gem "devise", github: "heartcombo/devise", branch: "main"
+
+gem "file_validators", "~> 3.0"

@@ -9,7 +9,11 @@
 
   <div class="actions">
     <div class="item current-user">
-      <div class="avatar"></div>
+      <div class="avatar">
+        <% if current_user.avatar.present? %>
+          <%= image_tag current_user.avatar %>
+      <% end %>
+      </div>
       <div class="action">
         <%= link_to "#{current_user.email}", edit_user_registration_path %>
       </div>
